@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div *ngIf="errMsg.length<1">
+    <h3 class="fw-bold text-success ms-3">Appointment Details</h3>
+    <div class=" parent">
+        <div class="main" *ngFor="let a of appointments">
+            <p><b>Id:</b> {{ a.id }}</p>
+            <p><b>Title:</b> {{ a.title }}</p>
+            <p><b>Patient Name:</b> {{ a.patientName }}</p>
+            <p><b>Date:</b> {{ a.date }}</p>
+            <p><b>Issue:</b> {{ a.isuue }}</p>
+            <button class="btn btn-success" (click)="accept(a.id)">Accept</button>
+            <button class="btn btn-danger ms-2" (click)="reject(a.id)">Reject</button>
+
+        </div>
+    </div>
+</div>
+<div *ngIf="errMsg.length>1">
+    <h3 class="fw-bold text-danger ms-3">{{errMsg}}</h3>
+</div>
+
+<app-footer></app-footer>

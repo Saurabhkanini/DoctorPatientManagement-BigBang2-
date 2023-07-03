@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="main ms-3">
+    <h4 class="fw-bold text-success">Book Appointment</h4>
+    <form (ngSubmit)="submitForm()">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" [(ngModel)]="appointment.title"><br><br>
+
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" name="patientName" [(ngModel)]="appointment.patientName"><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" [(ngModel)]="appointment.date"><br><br>
+
+        <label for="isuue">IssueDepartment:</label>
+        <select name="isuue" id="isuue" [(ngModel)]="appointment.isuue">
+            <option value="dentist">Dentist</option>
+            <option value="child">Child</option>
+            <option value="neuro">Neuro</option>
+        </select><br><br>
+
+        <button class="btn btn-success" type="submit">Create Appointment</button>
+    </form>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,41 @@
+.doctorCard {
+    max-width: fit-content;
+    height: fit-content;
+    border: .1rem solid black;
+    background-color: gray;
+    word-wrap: break-word;
+    padding: .1rem;
+}
+
+.contentImg {
+    padding-left: 1rem;
+    width: 15rem;
+    height: 15rem;
+}
+
+p {
+    color: white;
+}
+
+.allcontact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+button.active {
+    background-color: green;
+}
+
+button.inactive {
+    background-color: red;
+}
+
+span {
+    color: white;
+}
+
+div p,
+span {
+    padding-left: 1rem;
+}

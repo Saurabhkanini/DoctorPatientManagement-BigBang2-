@@ -1,0 +1,24 @@
+img {
+    max-width: 200px;
+    border-radius: 50px;
+    max-height: 150px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin-top: 1%;
+    max-width: fit-content;
+    background-color: white;
+}
+
+.main {
+    background-image: url('../../assets/images/bgdocc.jpg');
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+    margin: 1.1rem;
+}

@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="main">
+    <div class="container border border-dark p-5">
+        <form [formGroup]="loginForm" (ngSubmit)="LoginUser()">
+            <h2 class="text-dark"><b>User Login</b> </h2>
+            <img src="../../assets/images/avtarimgg.jpg" alt="">
+            <br>
+            <label for="username"><b class="text-primary">Enter UserName</b> </label><br>
+            <input type="text" name="" id="" placeholder="Enter UserName" formControlName="username"><br>
+            <label for="password"><b class="text-primary">Enter PassWord</b> </label><br>
+            <input type="password" name="" id="" placeholder="Enter PassWord" formControlName="password"><br>
+            <input type="submit" value="Login" class="btn btn-success mt-2">
+            <p><b>New User <a href="home/signup"><b>signUp</b></a></b></p>
+        </form>
+        <!-- <p class="fw-bold text-danger" *ngIf="errorMsg">{{errorMsg |json}}</p> -->
+    </div>
+</div>
+<app-footer></app-footer>

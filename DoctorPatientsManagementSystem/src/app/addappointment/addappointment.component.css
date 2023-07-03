@@ -1,0 +1,9 @@
+.main {
+    width: fit-content;
+    padding: 2rem;
+    border: .1rem solid black;
+}
+
+label {
+    font-weight: bold;
+}

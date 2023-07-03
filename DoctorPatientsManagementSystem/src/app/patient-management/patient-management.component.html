@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div *ngIf="errMsg.length<1">
+    <p class="h3 text-danger fw-bold ms-3 mb-2">Add NewPatient
+        <a class="btn btn-danger bt btn-sm" routerLink="/home/addpatient">
+            <i class="fa fa-plus-circle"></i> New</a>
+    </p>
+    <div class="allcontact ms-3">
+        <div class="doctorCard" *ngFor="let m of patients">
+            <p><b>PatientID:-</b>{{m.pid}}</p>
+            <p><b>PatientName:-</b>{{m.pname}}</p>
+            <p><b>PatientLocation:-</b>{{m.plocation}}</p>
+            <p><b>PatientIssue:-</b>{{m.pissue}}</p>
+            <button class="btn btn-danger ms-2" (click)="deletePatient(m.pid)">DeletePatient</button>
+            <a href="home/updatepatient/{{m.pid}}" class="btn btn-primary mt-1 ms-2">UpdatePatient</a>
+        </div>
+    </div>
+
+</div>
+<div *ngIf="errMsg.length>1">
+    <h3 class="fw-bold text-danger ms-3">{{errMsg}}</h3>
+</div>
+
+<app-footer></app-footer>

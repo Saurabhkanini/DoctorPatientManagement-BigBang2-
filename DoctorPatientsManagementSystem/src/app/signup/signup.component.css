@@ -1,0 +1,28 @@
+img {
+    max-width: 200px;
+    border-radius: 50px;
+    max-height: 150px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: white;
+    max-width: fit-content;
+}
+
+.main {
+    background-image: url('../../assets/images/bggdoc.webp');
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+    margin: 1.1rem;
+}
+
+form {
+    width: fit-content;
+}

@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+
+<div class=" main border border-dark mt-3 ms-3">
+    <h2><b class="text-dark">Update Patient</b></h2>
+    <input type="text" name="" id="" placeholder="Enter PatientName" [(ngModel)]="patient.pname"><br><br>
+    <select name="" id="" [(ngModel)]="patient.pissue">
+        <option value="">Choose Specialization</option>
+        <option value="dentist">Dentist</option>
+        <option value="child">Child</option>
+        <option value="neuro">Neuro</option>
+    </select><br><br>
+    <input type="text" name="" id="" placeholder="Enter Location" [(ngModel)]="patient.plocation"><br><br>
+    <button (click)="updatePatient()" class="btn btn-primary">Update Patient</button> <a href="home/patientman"
+        class="btn btn-danger ms-3">Close</a>
+
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,17 @@
+.main {
+    border: .1rem solid black;
+    padding: 2rem;
+    width: fit-content;
+    margin: 2rem;
+    background-color: black;
+
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p {
+    color: white;
+}

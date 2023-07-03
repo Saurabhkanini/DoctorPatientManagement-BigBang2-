@@ -1,0 +1,26 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    max-width: 4rem;
+    max-height: 4rem;
+    border-radius: 5rem;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus {
+    color: white;
+}
+
+.ebtn:hover,
+.ebtn:focus {
+    background-color: rgb(10, 132, 238);
+    border-radius: 2rem;
+    height: 2.5rem;
+}
+
+.btn {
+    height: 3rem;
+}

@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+
+<div class="border border-dark col-sm-6 mt-3 ms-3">
+    <h2><b class="text-dark">Add Doctor</b></h2>
+    <input type="text" name="" id="" placeholder="Enter DoctorName" [(ngModel)]="addDoctor.doctorName"><br><br>
+    <!-- <input type="text" name="" id="" placeholder="Enter Specialization " [(ngModel)]="addDoctor.specialization"><br><br> -->
+    <select name="" id="" [(ngModel)]="addDoctor.specialization">
+        <option value="">Choose Specialization</option>
+        <option value="dentist">Dentist</option>
+        <option value="child">Child</option>
+        <option value="neuro">Neuro</option>
+    </select><br><br>
+    <input type="number" name="" id="" placeholder="Enter Age" [(ngModel)]="addDoctor.age"><br><br>
+    <input type="text" name="" id="" placeholder="Enter Location" [(ngModel)]="addDoctor.location"><br><br>
+    <input type="file" placeholder="Upload Image" (change)="onFileSelected($event)"><br><br>
+    <button (click)="AddDoctor()" class="btn btn-primary">Add Doctor</button> <a href="home"
+        class="btn btn-danger ms-3">Close</a>
+
+</div>
+<app-footer></app-footer>

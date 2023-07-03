@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div *ngIf="errMsg.length<1">
+    <p class="h3 text-danger fw-bold ms-3 mb-2">Add NewDoctor
+        <a class="btn btn-danger bt btn-sm" routerLink="/home/adddoctor">
+            <i class="fa fa-plus-circle"></i> New</a>
+    </p>
+    <div class="allcontact ms-3">
+        <div class="doctorCard" *ngFor="let m of doctors">
+            <img [src]=" 'data:image/png;base64,' + m.imageData" class="contentImg">
+            <p><b>DoctorID:-</b>{{m.doctorId}}</p>
+            <p><b>DoctorName:-</b>{{m.doctorName}}</p>
+            <p><b>Specialization:-</b>{{m.specialization}}</p>
+            <span><b>DoctorStatus:-</b><button class="btn" [class.active]="m.doctorStatus"
+                    [class.inactive]="!m.doctorStatus" (click)="ChangeStatus(m.doctorId)">{{m.doctorStatus ? 'active' :
+                    'inactive'}} </button></span>
+            <p><b>Age:-</b>{{m.age}}</p>
+            <p><b>Location:-</b>{{m.location}}</p>
+            <a href="home/viewdoctor/{{m.doctorId}}" class="btn btn-success">ViewDoctor</a>
+            <button class="btn btn-danger ms-2" (click)="deleteDoctor(m.doctorId)">DeleteDoctor</button>
+            <a href="home/updatedoctor/{{m.doctorId}}" class="btn btn-primary mt-1 ms-2">UpdateDoctor</a>
+        </div>
+    </div>
+
+</div>
+<div *ngIf="errMsg.length>1">
+    <h3 class="fw-bold text-danger ms-3">{{errMsg}}</h3>
+</div>
+
+<app-footer></app-footer>

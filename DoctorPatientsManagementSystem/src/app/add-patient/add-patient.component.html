@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+
+<div class=" main border border-dark mt-3 ms-3">
+    <h2><b class="text-dark">Add Patient</b></h2>
+    <input type="text" name="" id="" placeholder="Enter PatientName" [(ngModel)]="addPatient.pname"><br><br>
+    <select name="" id="" [(ngModel)]="addPatient.pissue">
+        <option value="">Choose Specialization</option>
+        <option value="dentist">Dentist</option>
+        <option value="child">Child</option>
+        <option value="neuro">Neuro</option>
+    </select><br><br>
+    <input type="text" name="" id="" placeholder="Enter Location" [(ngModel)]="addPatient.plocation"><br><br>
+    <button (click)="AddPatient()" class="btn btn-primary">Add Patient</button> <a href="home"
+        class="btn btn-danger ms-3">Close</a>
+
+</div>
+<app-footer></app-footer>

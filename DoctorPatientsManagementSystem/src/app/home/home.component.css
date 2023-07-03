@@ -1,0 +1,13 @@
+.main {
+    margin-top: 20px;
+    border: .1rem solid black;
+    display: flex;
+    margin: 1rem;
+    width: fit-content;
+}
+
+img {
+    max-width: 30rem;
+    max-height: 20rem;
+    padding: .5rem;
+}

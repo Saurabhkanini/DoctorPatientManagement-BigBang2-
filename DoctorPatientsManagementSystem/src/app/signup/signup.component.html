@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+<div class="main">
+    <div class="container border border-dark ps-5 pe-5">
+        <form [formGroup]="loginForm" (ngSubmit)="SignUp()">
+            <h2 class="text-dark fw-bold"><b>User SignUp</b> </h2>
+            <img src="../../assets/images/avtarimgg.jpg" alt="">
+            <br>
+            <label for="userName"><b class="text-primary">Enter UserName</b> </label><br>
+            <input type="text" name="username" id="" placeholder="Enter UserName" formControlName="userName"><br>
+            <span *ngIf="userName && userName.invalid && userName.touched" class="text-danger">Please Fill Valid
+                Detail</span><br>
+            <label for="Email"><b class="text-primary">Enter Email</b> </label><br>
+            <input type="text" name="" id="" placeholder="Enter Email" formControlName="email"><br>
+            <span *ngIf="email && email.invalid && email.touched" class="text-danger">Please Fill Valid
+                Detail</span><br>
+            <label for="password"><b class="text-primary">Enter PassWord</b> </label><br>
+            <input type="password" name="" id="" placeholder="Enter PassWord" formControlName="password"><br>
+            <span *ngIf="password && password.invalid && password.touched" class="text-danger">Please Fill Valid
+                Detail</span><br>
+            <label for="confirmPassword"><b class="text-primary">Re-Enter PassWord</b> </label><br>
+            <input type="password" name="" id="" placeholder="Re-Enter PassWord" formControlName="confirmPassword"><br>
+            <span
+                *ngIf="confirmPassword && password && confirmPassword.value !== password.value && confirmPassword.touched"
+                class="text-danger">Enter Same PassWord as above</span><br>
+            <label for="phoneNo"><b class="text-primary">PhoneNo</b> </label><br>
+            <input type="text" name="" id="" placeholder="Enter PhoneNo" formControlName="phoneNo"><br>
+            <span *ngIf="phoneNo && phoneNo.invalid && phoneNo.touched" class="text-danger">Please Fill Valid
+                Detail</span><br>
+
+            <label for="gender"><b class="text-primary">Select Gender</b></label><br>
+            <label>
+                <input type="radio" name="gender" value="Male" formControlName="gender"> Male
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="Female" formControlName="gender"> Female
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="Other" formControlName="gender"> Other
+            </label><br>
+            <label for="role"><b class="text-primary">Select Role</b> </label><br>
+            <select formControlName="role">
+                <option value="">Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="doctor">Doctor</option>
+                <option value="patient">Patient</option>
+            </select><br>
+            <input [disabled]="loginForm.invalid" type="submit" value="SignUp" class="btn btn-success mt-2">
+            <p><b>Existing User <a href="home/login"><b>Login</b></a></b></p>
+            <p class="fw-bold text-danger" *ngIf="errorMsg">{{errorMsg |json}}</p>
+        </form>
+    </div>
+</div>
+<app-footer></app-footer>

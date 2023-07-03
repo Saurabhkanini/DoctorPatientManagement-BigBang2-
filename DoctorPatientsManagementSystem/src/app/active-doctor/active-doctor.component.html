@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div *ngIf="doctors.length > 0">
+    <h3 class="fw-bold text-success ms-3">Active Doctors</h3>
+    <p class="h3 text-success fw-bold ms-3 mb-2">Book Appointment
+        <a class="btn btn-success bt btn-sm" routerLink="/home/addappointment">
+            <i class="fa fa-plus-circle"></i> New</a>
+    </p>
+    <div class="allcontact ms-3">
+        <div class="doctorCard" *ngFor="let m of doctors">
+            <img [src]="'data:image/png;base64,' + m.imageData" class="contentImg">
+            <p><b>DoctorID:</b> {{m.doctorId}}</p>
+            <p><b>DoctorName:</b> {{m.doctorName}}</p>
+            <p><b>Specialization:</b> {{m.specialization}}</p>
+            <span><b>DoctorStatus:</b>
+                <p>{{m.doctorStatus ? 'active' : 'inactive'}}</p>
+            </span>
+            <p><b>Age:</b> {{m.age}}</p>
+            <p><b>Location:</b> {{m.location}}</p>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="doctors.length === 0">
+    <h1 class="text-danger">No Active Doctors Found</h1>
+</div>
+
+<app-footer></app-footer>
