@@ -3,10 +3,20 @@
     width: fit-content;
     height: fit-content;
     margin: auto;
+    background-color: rgba(238, 235, 235, 0.63);
 }
 
 img {
-    width: 15rem;
+    max-width: 15rem;
     height: 15rem;
     padding-top: 10px;
+}
+
+.collection {
+    background-image: url('../../assets/images/bgdocc.jpg');
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+    margin: 1.1rem;
+
 }

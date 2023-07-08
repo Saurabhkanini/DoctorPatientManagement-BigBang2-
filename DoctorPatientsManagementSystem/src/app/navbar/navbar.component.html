@@ -5,10 +5,14 @@
                 <img src="../../assets/images/hospitalLogo.webp" alt="">
                 <a class="fw-bold " href="#">Doctor Patient Management</a>
             </li>
+
             <li class="nav-item mt-2 ms-3">
                 <span *ngIf="userName" class="text-danger fw-bold nav-link"> Welcome:- <span
                         class="text-primary">{{userName}}</span>
                 </span>
+            </li>
+            <li *ngIf="role==='doctor' " class="nav-item  btn btn-success ms-3 btn-sm mt-3 ">
+                <a class="nav-link " href="home/adddoctor">MyProfile</a>
             </li>
         </ul>
         <div class=" navbar" id="navbarNav">

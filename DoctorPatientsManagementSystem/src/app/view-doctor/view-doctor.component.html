@@ -1,11 +1,13 @@
 <app-navbar></app-navbar>
-<div class="main p-3 mt-3 mb-3">
-    <h1><b class="text-primary">{{doctor.doctorName}}</b></h1>
-    <img [src]=" 'data:image/png;base64,' + doctor.imageData" class="contentImg">
-    <p><b>Specialization:-</b>{{doctor.specialization}}</p>
-    <p><b>DoctorStatus:-</b>{{doctor.doctorStatus}}</p>
-    <p><b>Age:-</b>{{doctor.age}}</p>
-    <p><b>Location:-</b>{{doctor.location}}</p>
-    <a href="home/doctorman" class="btn btn-danger">Close</a>
+<div class="collection">
+    <div class="main p-3 mt-3 mb-3">
+        <h1><b class="text-primary">{{doctor.doctorName}}</b></h1>
+        <img [src]=" 'data:image/png;base64,' + doctor.imageData" class="contentImg">
+        <p><b>Specialization:-</b>{{doctor.specialization}}</p>
+        <p><b>DoctorStatus:-</b>{{doctor.doctorStatus}}</p>
+        <p><b>Age:-</b>{{doctor.age}}</p>
+        <p><b>Location:-</b>{{doctor.location}}</p>
+        <a href="home/doctorman" class="btn btn-danger">Close</a>
+    </div>
 </div>
 <app-footer></app-footer>

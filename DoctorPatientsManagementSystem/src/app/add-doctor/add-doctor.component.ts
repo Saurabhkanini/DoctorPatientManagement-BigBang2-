@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DoctorPatientService } from '../services/doctor-patient.service';
 import { ToastrService } from 'ngx-toastr';
 
@@ -7,16 +7,29 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './add-doctor.component.html',
   styleUrls: ['./add-doctor.component.css']
 })
-export class AddDoctorComponent {
+export class AddDoctorComponent implements OnInit {
 
   constructor(private service: DoctorPatientService, private toast: ToastrService) { }
+
+  role: string | null = localStorage.getItem('role');
+  doctor: any = null;
   addDoctor: any = {
-    doctorName: '',
+    doctorName: localStorage.getItem('docname'),
     specialization: '',
     doctorStatus: false,
     age: 0,
     location: '',
     imageData: ''
+  }
+  ngOnInit(): void {
+    let docName = localStorage.getItem('docname');
+    console.log(docName)
+    if (docName != null && this.
+      role === 'doctor') {
+      this.service.getDocByName(docName).subscribe((data) => {
+        this.doctor = data;
+      })
+    }
   }
 
   onFileSelected(event: any) {
@@ -36,6 +49,7 @@ export class AddDoctorComponent {
     this.service.addDoctor(this.addDoctor).subscribe((data) => {
       console.log(data);
       this.toast.success('Doctor Added')
+      this.ngOnInit();
     }, (response) => {
       console.log(response)
     })

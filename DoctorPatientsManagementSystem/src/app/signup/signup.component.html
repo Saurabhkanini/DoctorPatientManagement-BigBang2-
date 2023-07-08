@@ -13,12 +13,12 @@
             <input type="text" name="" id="" placeholder="Enter Email" formControlName="email"><br>
             <span *ngIf="email && email.invalid && email.touched" class="text-danger">Please Fill Valid
                 Detail</span><br>
-            <label for="password"><b class="text-primary">Enter PassWord</b> </label><br>
-            <input type="password" name="" id="" placeholder="Enter PassWord" formControlName="password"><br>
+            <label for="password"><b class="text-primary">Enter Password</b> </label><br>
+            <input type="password" name="" id="" placeholder="Enter Password" formControlName="password"><br>
             <span *ngIf="password && password.invalid && password.touched" class="text-danger">Please Fill Valid
                 Detail</span><br>
-            <label for="confirmPassword"><b class="text-primary">Re-Enter PassWord</b> </label><br>
-            <input type="password" name="" id="" placeholder="Re-Enter PassWord" formControlName="confirmPassword"><br>
+            <label for="confirmPassword"><b class="text-primary">Re-Enter Password</b> </label><br>
+            <input type="password" name="" id="" placeholder="Re-Enter Password" formControlName="confirmPassword"><br>
             <span
                 *ngIf="confirmPassword && password && confirmPassword.value !== password.value && confirmPassword.touched"
                 class="text-danger">Enter Same PassWord as above</span><br>
@@ -48,7 +48,6 @@
             </select><br>
             <input [disabled]="loginForm.invalid" type="submit" value="SignUp" class="btn btn-success mt-2">
             <p><b>Existing User <a href="home/login"><b>Login</b></a></b></p>
-            <p class="fw-bold text-danger" *ngIf="errorMsg">{{errorMsg |json}}</p>
         </form>
     </div>
 </div>

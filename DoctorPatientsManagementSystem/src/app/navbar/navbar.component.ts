@@ -11,8 +11,10 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   constructor(private service: DoctorPatientService, private router: Router) { }
   userName: string | null = null;
+  role: string | null = null;
   ngOnInit(): void {
     this.userName = localStorage.getItem('userName');
+    this.role = localStorage.getItem('role')
   }
 
   Login() {

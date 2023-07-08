@@ -7,3 +7,12 @@
 label {
     font-weight: bold;
 }
+
+.collection {
+    background-image: url('../../assets/images/bgdocc.jpg');
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+    margin: 1.1rem;
+
+}

@@ -27,6 +27,8 @@ import { AppointmentComponent } from './appointment/appointment.component';
 import { AddpatientComponent } from './addpatient/addpatient.component';
 import { AddappointmentComponent } from './addappointment/addappointment.component';
 import { UpdatePatientComponent } from './update-patient/update-patient.component';
+import { DocProfileComponent } from './doc-profile/doc-profile.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 
@@ -50,7 +52,9 @@ import { UpdatePatientComponent } from './update-patient/update-patient.componen
     AppointmentComponent,
     AddpatientComponent,
     AddappointmentComponent,
-    UpdatePatientComponent
+    UpdatePatientComponent,
+    DocProfileComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

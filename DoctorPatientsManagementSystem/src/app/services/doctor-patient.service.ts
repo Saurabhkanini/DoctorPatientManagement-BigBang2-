@@ -60,6 +60,10 @@ export class DoctorPatientService {
     let dataurl = `https://localhost:7050/api/Doctors/api/doctor/change-status/${id}`
     return this.http.put<any>(dataurl, id)
   }
+  getDocByName(name: string): Observable<any> {
+    let dataurl = `https://localhost:7050/api/Doctors/name/${name}`
+    return this.http.get<any>(dataurl);
+  }
   //PAtient services
   getAllPatient(): Observable<any> {
     let dataurl = 'https://localhost:7050/api/Patient'

@@ -1,20 +1,33 @@
 <app-navbar></app-navbar>
 
-<div class="border border-dark col-sm-6 mt-3 ms-3">
-    <h2><b class="text-dark">Add Doctor</b></h2>
-    <input type="text" name="" id="" placeholder="Enter DoctorName" [(ngModel)]="addDoctor.doctorName"><br><br>
-    <!-- <input type="text" name="" id="" placeholder="Enter Specialization " [(ngModel)]="addDoctor.specialization"><br><br> -->
-    <select name="" id="" [(ngModel)]="addDoctor.specialization">
-        <option value="">Choose Specialization</option>
-        <option value="dentist">Dentist</option>
-        <option value="child">Child</option>
-        <option value="neuro">Neuro</option>
-    </select><br><br>
-    <input type="number" name="" id="" placeholder="Enter Age" [(ngModel)]="addDoctor.age"><br><br>
-    <input type="text" name="" id="" placeholder="Enter Location" [(ngModel)]="addDoctor.location"><br><br>
-    <input type="file" placeholder="Upload Image" (change)="onFileSelected($event)"><br><br>
-    <button (click)="AddDoctor()" class="btn btn-primary">Add Doctor</button> <a href="home"
-        class="btn btn-danger ms-3">Close</a>
+<div class="collection">
+    <div *ngIf="doctor==null" class="border border-dark col-sm-6 mt-3 ms-3">
+        <h2><b class="text-dark">Add Doctor</b></h2>
+        <input type="text" name="" id="" placeholder="Enter DoctorName" [(ngModel)]="addDoctor.doctorName"><br><br>
+        <!-- <input type="text" name="" id="" placeholder="Enter Specialization " [(ngModel)]="addDoctor.specialization"><br><br> -->
+        <select name="" id="" [(ngModel)]="addDoctor.specialization">
+            <option value="">Choose Specialization</option>
+            <option value="dentist">Dentist</option>
+            <option value="child">Child</option>
+            <option value="neuro">Neuro</option>
+        </select><br><br>
+        <input type="number" name="" id="" placeholder="Enter Age" [(ngModel)]="addDoctor.age"><br><br>
+        <input type="text" name="" id="" placeholder="Enter Location" [(ngModel)]="addDoctor.location"><br><br>
+        <input type="file" placeholder="Upload Image" (change)="onFileSelected($event)"><br><br>
+        <button (click)="AddDoctor()" class="btn btn-primary">Add Doctor</button> <a href="home/doctorman"
+            class="btn btn-danger ms-3">Close</a>
 
+    </div>
+    <!-- <a class="btn btn-success" href="home/docprofile">My Profile</a> -->
+    <div *ngIf="role=='doctor' && doctor!=null" class="main p-3 mt-3 mb-3 ms-3">
+        <h1 class="fw-bold text-success">My Profile</h1>
+        <h1><b class="text-primary">{{doctor.doctorName}}</b></h1>
+        <img [src]=" 'data:image/png;base64,' + doctor.imageData" class="contentImg">
+        <p><b>Specialization:-</b>{{doctor.specialization}}</p>
+        <p><b>DoctorStatus:-</b>{{doctor.doctorStatus? 'Active' : 'InActive'}}</p>
+        <p><b>Age:-</b>{{doctor.age}}</p>
+        <p><b>Location:-</b>{{doctor.location}}</p>
+        <!-- <a href="home/doctorman" class="btn btn-danger">Close</a> -->
+    </div>
 </div>
 <app-footer></app-footer>

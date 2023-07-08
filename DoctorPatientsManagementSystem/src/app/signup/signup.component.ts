@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { DoctorPatientService } from '../services/doctor-patient.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +12,7 @@ import { DoctorPatientService } from '../services/doctor-patient.service';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private service: DoctorPatientService, private toast: ToastrService) { }
+  constructor(private service: DoctorPatientService, private toast: ToastrService, private router: Router) { }
 
   errorMsg: string = '';
   loginForm = new FormGroup({
@@ -64,11 +66,12 @@ export class SignupComponent implements OnInit {
       console.log(data);
       if (data !== null) {
         this.toast.success('Registered Successfully')
+        this.router.navigate(['home/login'])
       }
 
     }, (response) => {
-      this.toast.error('Failed')
       this.errorMsg = response.error;
+      this.toast.error('userName Already Exists')
     });
 
   }

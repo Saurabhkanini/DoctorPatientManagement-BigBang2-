@@ -1,0 +1,18 @@
+.contentImg {
+    max-width: 15rem;
+}
+
+.main {
+    border: .1rem solid black;
+    padding: 1rem;
+    width: fit-content;
+}
+
+.collection {
+    background-image: url('../../assets/images/bgdocc.jpg');
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+    margin: 1.1rem;
+
+}

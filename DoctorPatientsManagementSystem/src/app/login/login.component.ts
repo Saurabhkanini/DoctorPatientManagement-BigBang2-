@@ -42,8 +42,11 @@ export class LoginComponent {
         localStorage.setItem('role', data.user.role);
         localStorage.setItem('userName', data.user.userName)
         let role = localStorage.getItem('role')
-        if (role == 'doctor')
+        if (role == 'doctor') {
+          localStorage.setItem('docname', data.user.userName)
           this.router.navigate(['home/adddoctor']);
+        }
+
         if (role == 'admin')
           this.router.navigate(['home/doctorman']);
         if (role == 'patient')

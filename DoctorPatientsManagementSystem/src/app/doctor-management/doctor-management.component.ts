@@ -25,6 +25,7 @@ export class DoctorManagementComponent implements OnInit {
     alert("Are You Sure")
     this.service.deleteDoctor(id).subscribe((data) => {
       console.log(data)
+      this.ngOnInit()
     })
   }
   ChangeStatus(id: number) {

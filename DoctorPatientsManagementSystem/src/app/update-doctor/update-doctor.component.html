@@ -1,19 +1,22 @@
 <app-navbar></app-navbar>
 
-<div class="border border-dark col-sm-6 mt-3 ms-3 d-flex">
-    <div>
-        <h2><b class="text-dark">Update Doctor Details</b></h2>
-        <input type="text" name="" id="" placeholder="Enter DoctorName" [(ngModel)]="doctor.doctorName"><br><br>
-        <input type="text" name="" id="" placeholder="Enter specialization" [(ngModel)]="doctor.specialization"><br><br>
-        <input type="text" name="" id="" placeholder="Enter Age" [(ngModel)]="doctor.age"><br><br>
-        <input type="text" name="" id="" placeholder="Enter Location" [(ngModel)]="doctor.location"><br><br>
+<div class="collection">
+    <div class="border  border-dark col-sm-6 mt-3 ms-3 d-flex">
+        <div>
+            <h2><b class="text-dark">Update Doctor Details</b></h2>
+            <input type="text" name="" id="" placeholder="Enter DoctorName" [(ngModel)]="doctor.doctorName"><br><br>
+            <input type="text" name="" id="" placeholder="Enter specialization"
+                [(ngModel)]="doctor.specialization"><br><br>
+            <input type="text" name="" id="" placeholder="Enter Age" [(ngModel)]="doctor.age"><br><br>
+            <input type="text" name="" id="" placeholder="Enter Location" [(ngModel)]="doctor.location"><br><br>
 
-        <input type="file" placeholder="Upload Image" (change)="onFileSelected($event)"><br><br>
-        <button (click)="UpdateDoctor()" class="btn btn-primary">Update Detail</button> <a href="home/doctorman"
-            class="btn btn-danger ms-3">Close</a>
-    </div>
-    <div>
-        <img [src]=" 'data:image/png;base64,' + doctor.imageData">
+            <input type="file" placeholder="Upload Image" (change)="onFileSelected($event)"><br><br>
+            <button (click)="UpdateDoctor()" class="btn btn-primary">Update Detail</button> <a href="home/doctorman"
+                class="btn btn-danger ms-3">Close</a>
+        </div>
+        <div>
+            <img [src]=" 'data:image/png;base64,' + doctor.imageData">
+        </div>
     </div>
 </div>
 <app-footer></app-footer>

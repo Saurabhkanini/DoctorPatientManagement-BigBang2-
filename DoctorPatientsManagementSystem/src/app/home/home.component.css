@@ -4,6 +4,9 @@
     display: flex;
     margin: 1rem;
     width: fit-content;
+    color: white;
+    background-color: black;
+
 }
 
 img {
@@ -11,3 +14,5 @@ img {
     max-height: 20rem;
     padding: .5rem;
 }
+
+/* ======================================================ddddddddddddd */

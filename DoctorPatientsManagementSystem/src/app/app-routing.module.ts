@@ -14,6 +14,8 @@ import { AddPatientComponent } from './add-patient/add-patient.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { AddappointmentComponent } from './addappointment/addappointment.component';
 import { UpdatePatientComponent } from './update-patient/update-patient.component';
+import { DocProfileComponent } from './doc-profile/doc-profile.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
@@ -30,6 +32,10 @@ const routes: Routes = [
   { path: 'home/appointment', component: AppointmentComponent, canActivate: [AuthGuard] },
   { path: 'home/addappointment', component: AddappointmentComponent, canActivate: [AuthGuard] },
   { path: 'home/updatepatient/:id', component: UpdatePatientComponent, canActivate: [AuthGuard] },
+  { path: 'home/docprofile', component: DocProfileComponent, canActivate: [AuthGuard] },
+  { path: '**', component: PagenotfoundComponent, canActivate: [AuthGuard] },
+
+
 ];
 
 @NgModule({
